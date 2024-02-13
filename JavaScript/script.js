@@ -1,3 +1,15 @@
+//  * Titulo Pestaña
+let previousTitle = document.title
+
+window.addEventListener('blur', () => {
+    previousTitle = document.title
+    document.title = `!Regresa con tu PDF¡ 😭`
+})
+
+window.addEventListener('focus', () => {
+    document.title = previousTitle
+})
+
 document.addEventListener('DOMContentLoaded', () => {
     const fileInput = document.getElementById('fileInput');
     const convertBtn = document.getElementById('convertBtn');
